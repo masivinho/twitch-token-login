@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": [ "popup/script.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icons/logo.png",
+      "default_popup": "popup/index.html"
+   },
+   "description": "Logging into a Twitch account using a token, made easier.",
+   "icons": {
+      "128": "icons/logo.png"
+   },
+   "manifest_version": 2,
+   "name": "Twitch Token Login",
+   "author": "https://github.com/masivinho",
+   "permissions": [
+      "cookies",
+      "tabs",
+      "activeTab",
+      "http://*.twitch.tv/*",
+      "https://*.twitch.tv/*"
+   ],
+   "version": "0.1"
+}
