@@ -23,23 +23,6 @@ const handleCookiesUpdate = async (token) => {
         value: token
     });
 
-    const twilight_user = JSON.stringify({
-        authToken: token,
-        displayName: 'notch',
-        id: 193793598,
-        login: 'notch',
-        roles: {
-            isStaff:false
-        },
-        version: 2
-    });
-
-    chrome.cookies.set({
-        url: 'https://www.twitch.tv',
-        name: 'twilight-user',
-        value: `{${encodeURIComponent(twilight_user.substring(1, twilight_user.length-1))}}`
-    });
-
     setTimeout(async () => {
         chrome.tabs.update({ url: 'https://www.twitch.tv/wallet?tab=bits-usage-history' });
     }, 200);
